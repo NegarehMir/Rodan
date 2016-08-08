@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="{{ site.baseurl }}css/bootstrap.min.css">
 
     <!-- rodan includes -->
-    <link rel="stylesheet" href="{{ site.baseurl }}try/css/rodan.min.css" />
     <link rel="stylesheet" href="{{ site.baseurl }}css/main.css">
     <style type="text/css">
         .rodan-fullscreen-tools {
@@ -26,7 +25,6 @@
         }
     </style>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="{{ site.baseurl }}try/js/rodan.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $('#rodan-wrapper').rodan({
@@ -36,7 +34,6 @@
                 enableAutoWidth: false,
                 fixedHeightGrid: false,
                 iipServerURL: "http://rodan.simssa.ca/fcgi-bin/iipsrv.fcgi",
-                objectData: "{{ site.baseurl }}try/demo/beromunster.json",
                 imageDir: "/srv/images/beromunster",
                 enableHighlight: true
             });

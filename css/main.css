@@ -3,7 +3,7 @@
 /* global */
 
 /* clearfix */
-.diva-tools:after, .diva-tools-right:after {
+.rodan-tools:after, .rodan-tools-right:after {
   content: "";
   display: table;
   clear: both;
@@ -290,70 +290,65 @@ footer p {
     }
 }
 
-/* try it */
-#diva-wrapper {
-    margin-bottom: 1em;
-}
-
-.diva-goto-form {
+.rodan-goto-form {
     line-height: 25px !important;
 }
 
-/* .diva-goto-form {
+/* .rodan-goto-form {
     float: right;
 }
-.diva-page-label {
+.rodan-page-label {
     float: right;
     padding-right: 4px !important;
 }
-.diva-buttons-label {
+.rodan-buttons-label {
     padding: 5px 10px !important;
 }
-.diva-input {
+.rodan-input {
     width: 38px;
 }
 hr.underline {
     margin-top: 0;
 } */
 
-/* styles for diva on small mobile devices */
+/* styles for rodan on small mobile devices */
 @media screen and (max-width: 480px) {
-    .diva-outer {
+    .rodan-outer {
         height: 400px;
     }
 
-    .diva-buttons-label {
+    .rodan-buttons-label {
         float: none;
         padding: 0px 0px !important;
     }
 
-    .diva-tools .diva-tools-left .diva-buttons-label {
+    .rodan-tools .rodan-tools-left .rodan-buttons-label {
         float: none;
     }
 
-    .diva-tools .diva-tools-right {
+    .rodan-tools .rodan-tools-right {
         float: none;
     }
 
-    .diva-tools .diva-tools-right .diva-page-nav .diva-goto-form {
+    .rodan-tools .rodan-tools-right .rodan-page-nav .rodan-goto-form {
         float: none;
         padding-top: 0;
     }
 
-    .diva-tools .diva-tools-right .diva-page-nav .diva-goto-form .diva-input {
+    .rodan-tools .rodan-tools-right .rodan-page-nav .rodan-goto-form .rodan-input {
         /* padding-top: inherit; */
     }
 
-    .diva-goto-form input[type="submit"] {
+    .rodan-goto-form input[type="submit"] {
         padding:3px .4em;
     }
 
-    .diva-page-nav {
+    .rodan-page-nav {
         float: right !important;
         line-height: inherit !important;
     }
 
-    .diva-page-label {
+    .rodan-page-label {
         line-height: inherit !important;
         /* not sure if all of these need to be here */
         float: left;
