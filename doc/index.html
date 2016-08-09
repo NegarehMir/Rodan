@@ -8,17 +8,33 @@ title: Documentation
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
                     <h3 align="center">Documentation</h4>
-                    <h4 align="center">How to use Diva.js:</h4>
-                    <p>To browse through the pages within a document, simply scroll through the document panel using the scrollwheel, the scrollbar, the arrow keys or the page up/page down keys. To zoom in, click the plus button and the left or double-click a page within the document viewer. To zoom out, click the minus button or hold the control key while double-clicking a page. You can enter and subsequently exit fullscreen mode by clicking the icon in the top right corner.</p>
-                    <p>To navigate larger documents, enter grid mode by clicking the box icon next to 'Go' button in the upper right, or go directly to a page by typing in the input box and clicking 'Go'.</p>
-                    <p>You can also share a link to your current position in the document. Click the link icon and copy the text in the popup to share with colleagues.</p>
-                    <p>To make adjustments to a page image, click the sliders icon at the top left of the page when in document mode. This will take you to image manipulation mode, where you can change contrast, brightness, rotation, and zoom by clicking on the icons under the mini-map in the upper-left corner of the page. Click 'apply' and you will see the results. The results are persistent, meaning next time you open the image manipulation mode, your changes will be intact unless you click 'Reset all'.</p>
-                    <p>To download the image of a page, click the down arrow at the upper left corner of the page. You will be taken straight to the full image, where you can right-click on the image or drag it onto your desktop to save it.</p>
+                    <h4 align="center">How to use Rodan:</h4>
+                    <p>To have a better understanding of how Rodan works, let's take a look at the softwares it uses.</p>
+                    <center><img src="{{ site.baseurl }}img/rodan-softwares/rodan-softwares.png"/ border="0" style="max-width:88%"></center>
+                    <br>
+                    <br>
+                    <p><img src="{{ site.baseurl }}img/rodan-softwares/celery.png" width="42" height="42" align="left"> <big>Celery</big>: Celery is the task queue used by Rodan to distribute the tasks to the workers</p>
+                    <p><img src="{{ site.baseurl }}img/rodan-softwares/rabbitmq.png" width="42" height="42" align="left"> <big>RabbitMQ</big>: RabbitMQ is the messaging broker used to connect rodan server to Celery</p>
+                    <p><img src="{{ site.baseurl }}img/rodan-softwares/nfs.png" width="42" height="42" align="left"> <big>NFS</big>: Network File System (NFS) helps the workers to access the resources on the server</p>
+                    <p><img src="{{ site.baseurl }}img/rodan-softwares/redis.png" width="42" height="42" align="left"> <big>Redis</big>: Redis is used as message broker for backend websocket messaging</p>
+                    <p><img src="{{ site.baseurl }}img/rodan-softwares/nginx.png" width="42" height="42" align="left"> <big>Nginx</big>: Nginx is the HTTP and reverse proxy server used to connect Rodan to Internet</p>
+                    <p><img src="{{ site.baseurl }}img/rodan-softwares/wsgi.png" width="42" height="42" align="left"> <big>WSGI</big>: Web Server Gateway Interface (WSGI) is used as the interface between nginx and Django</p>
+                    <p><img src="{{ site.baseurl }}img/rodan-softwares/postgresql.png" width="42" height="42" align="left"> <big>PostgreSQL</big>: PostgreSQL is the database system used by rodan</p>
+                    <br>
+                    <br>
+                    <p>Now let's take a look at rodan's most important models:</p>
+                    <center><img src="{{ site.baseurl }}img/rodan-model.png"/ border="0" style="max-width:100%"></center>
+                    <br>
+                    <br>
+                    <p>Each Project is created by a User. In each Project, You can upload Resources or a group of Resources (a ResourceList). A ResourceType is assigned to each Resource. ResourceTypes include text, image, midi, zip, etc</p>
+                    <p>Rodan uses different Job packages from other applications. It also has a few basic built-in Jobs. Some examples include convertions using PIL package such as conversion to PNG, TIF, JPEG2000. Each Job can get zero or more InputPortType and one or more OutputPortType.</p>
+                    <p>You can create a Workflow in workflow tab, importing one or many Jobs which creates WorkflowJobs. Each WorkflowJob which present the imported Job and will have zero or many InputPorts and one or many OutputPorts. These ports will have the same ResourceType as the original Job. You can connect these jobs together in the Workflow. A connection happens between an OutputPort of a WorkflowJob and InputPort of another one only when they have the same ResourceType. An InputPort without a Resource assigned will result in the Workflow being 'invalid' and Workflow cannot be run.</p>
+                    <p>Running a Workflow will produce a WorkflowRun and one RunJob for each of its WorkflowJobs. Each RunJob uses assigned Resources as its inputs and will produce one or more Resources as Outputs when the WorkflowRun is finished running. You can check the status of the WorkflowRun in WorkflowRun tab or you can see the status of each RunJob. The status can be PROCESSING, FAILED, FINISHED, etc.</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center">
-                    <p><a href="http://github.com/DDMAL/diva.js/wiki" class="text-center btn btn-primary">View the full documentation on Github.</a></p>
+                    <p><a href="http://github.com/DDMAL/rodan/wiki" target="_blank" class="text-center btn btn-primary">View the full documentation on Github.</a></p>
                 </div>
             </div>
         </div>
