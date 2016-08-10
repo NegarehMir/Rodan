@@ -5,24 +5,39 @@ title: Documentation
 <article id="documentation">
     <section class="light">
         <div class="container">
+            <div class="row" align="center">
+                <div class="col-md-10 col-md-offset-1">
+                    <h3>Documentation</h4>
+                    <h4>How to use Rodan:</h4>
+                    <p><big>To have a better understanding of how Rodan works, let's take a look at the softwares it uses:</big></p>
+                    <br>
+                    <br>
+                </div>
+            </div>
             <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <h3 align="center">Documentation</h4>
-                    <h4 align="center">How to use Rodan:</h4>
-                    <p>To have a better understanding of how Rodan works, let's take a look at the softwares it uses.</p>
-                    <center><img src="{{ site.baseurl }}img/rodan-softwares/rodan-softwares.png"/ border="0" style="max-width:88%"></center>
+                <div class="col-md-4 col-md-push-8 vcenter">
+                    <p><img src="{{ site.baseurl }}img/rodan-softwares/rodan-softwares.png"/ border="0" style="max-width:120%"></p>
+                </div><!--
+             --><div class="col-md-8 col-md-pull-4 vcenter">
+                        <p><img src="{{ site.baseurl }}img/rodan-softwares/celery.png" width="39" height="39" align="left"> <big>Celery</big>: Celery is the task queue used by Rodan to distribute the tasks to the workers</p>
+                        <br>
+                        <p><img src="{{ site.baseurl }}img/rodan-softwares/rabbitmq.png" width="39" height="39" align="left"> <big>RabbitMQ</big>: RabbitMQ is the messaging broker used to connect rodan server to Celery</p>
+                        <br>
+                        <p><img src="{{ site.baseurl }}img/rodan-softwares/nfs.png" width="39" height="39" align="left"> <big>NFS</big>: Network File System (NFS) helps the workers to access the resources on the server</p>
+                        <br>
+                        <p><img src="{{ site.baseurl }}img/rodan-softwares/redis.png" width="39" height="39" align="left"> <big>Redis</big>: Redis is used as message broker for backend websocket messaging</p>
+                        <br>
+                        <p><img src="{{ site.baseurl }}img/rodan-softwares/nginx.png" width="39" height="39" align="left"> <big>Nginx</big>: Nginx is the HTTP and reverse proxy server used to connect Rodan to Internet</p>
+                        <br>
+                        <p><img src="{{ site.baseurl }}img/rodan-softwares/wsgi.png" width="39" height="39" align="left"> <big>WSGI</big>: Web Server Gateway Interface (WSGI) is used as the interface between nginx and Django</p>
+                        <br>
+                        <p><img src="{{ site.baseurl }}img/rodan-softwares/postgresql.png" width="39" height="39" align="left"> <big>PostgreSQL</big>: PostgreSQL is the database system used by rodan</p>
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-1">
                     <br>
                     <br>
-                    <p><img src="{{ site.baseurl }}img/rodan-softwares/celery.png" width="42" height="42" align="left"> <big>Celery</big>: Celery is the task queue used by Rodan to distribute the tasks to the workers</p>
-                    <p><img src="{{ site.baseurl }}img/rodan-softwares/rabbitmq.png" width="42" height="42" align="left"> <big>RabbitMQ</big>: RabbitMQ is the messaging broker used to connect rodan server to Celery</p>
-                    <p><img src="{{ site.baseurl }}img/rodan-softwares/nfs.png" width="42" height="42" align="left"> <big>NFS</big>: Network File System (NFS) helps the workers to access the resources on the server</p>
-                    <p><img src="{{ site.baseurl }}img/rodan-softwares/redis.png" width="42" height="42" align="left"> <big>Redis</big>: Redis is used as message broker for backend websocket messaging</p>
-                    <p><img src="{{ site.baseurl }}img/rodan-softwares/nginx.png" width="42" height="42" align="left"> <big>Nginx</big>: Nginx is the HTTP and reverse proxy server used to connect Rodan to Internet</p>
-                    <p><img src="{{ site.baseurl }}img/rodan-softwares/wsgi.png" width="42" height="42" align="left"> <big>WSGI</big>: Web Server Gateway Interface (WSGI) is used as the interface between nginx and Django</p>
-                    <p><img src="{{ site.baseurl }}img/rodan-softwares/postgresql.png" width="42" height="42" align="left"> <big>PostgreSQL</big>: PostgreSQL is the database system used by rodan</p>
-                    <br>
-                    <br>
-                    <p>Now let's take a look at rodan's most important models:</p>
+                    <p align="center"><big>Now let's take a look at rodan's most important models:</big></p>
                     <center><img src="{{ site.baseurl }}img/rodan-model.png"/ border="0" style="max-width:100%"></center>
                     <br>
                     <br>
